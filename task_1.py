@@ -21,15 +21,15 @@ class Car:
         price = int(input("Введите цену: "))
         return Car(model, year, manufacturer, engine_volume, color, price)
 
-    @staticmethod
-    def output_data():
+    def output_data(self):
         """Метод для вывода данных о автомобиле"""
-        print("Модель:", model)
-        print("Год выпуска:", year)
-        print("Производитель:", manufacturer)
-        print("Объем двигателя:", engine_volume)
-        print("Цвет:", color)
-        print("Цена:", price)
+        print("---------------------------")
+        print("Модель:", self.model)
+        print("Год выпуска:", self.year)
+        print("Производитель:", self.manufacturer)
+        print("Объем двигателя:", self.engine_volume)
+        print("Цвет:", self.color)
+        print("Цена:", self.price)
 
     def get_model(self):
         """Метод для получения названия модели автомобиля"""
@@ -58,4 +58,4 @@ class Car:
 
 if __name__ == "__main__":
     car = Car.input_data()
-    Car.output_data()
+    car.output_data()
